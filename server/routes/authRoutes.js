@@ -15,6 +15,7 @@ module.exports = app => {
     // Google: Direct to http://localhost:5000/auth/google/callback?code=456 
     // Server: Put user on hold, take the 'code' from the URL
     // Server: Send request to google with 'code' included
+
     app.get(
         '/auth/google/callback',
         passport.authenticate('google'), (req, res) => {
